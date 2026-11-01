@@ -1,0 +1,24 @@
+/* Generated from domain/theme.py by scripts/sync_legal_site.py. */
+:root {
+  --background: #F9FAFB;
+  --surface: #EEF0F2;
+  --surface-raised: #E2E6E9;
+  --text: #1B1F22;
+  --muted: #4C5861;
+  --accent: #386B94;
+  --border: #A9B4BC;
+  --radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+  --background: #0D1011;
+  --surface: #161A1D;
+  --surface-raised: #1F2428;
+  --text: #EEF0F2;
+  --muted: #A9B4BC;
+  --accent: #90B6D5;
+  --border: #434E56;
+  --radius: 16px;
+}
+}

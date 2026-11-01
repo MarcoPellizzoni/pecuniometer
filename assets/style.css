@@ -1,26 +1,17 @@
-:root {
-  color-scheme: light dark;
-  --background: #f5f7f6;
-  --surface: #ffffff;
-  --text: #17211e;
-  --muted: #52605c;
-  --accent: #087a60;
-  --border: #d8e1dd;
-  --shadow: 0 12px 32px rgb(15 38 31 / 8%);
-  font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+@import url("theme.css");
+
+@font-face {
+  font-family: "Damion";
+  src: url("fonts/Damion-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b0f0e;
-    --surface: #141a18;
-    --text: #edf5f2;
-    --muted: #a9b8b3;
-    --accent: #6bdbba;
-    --border: #2b3834;
-    --shadow: none;
-  }
+:root {
+  color-scheme: light dark;
+  font: 15px/1.65 Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 * {
@@ -80,7 +71,9 @@ header {
 
 .brand {
   color: var(--text);
-  font-weight: 750;
+  font-family: "Damion", cursive;
+  font-size: 30px;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -137,8 +130,7 @@ h2 {
 .component {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: var(--shadow);
+  border-radius: var(--radius);
   padding: 1.35rem;
 }
 
@@ -184,7 +176,7 @@ summary {
 }
 
 pre {
-  background: var(--background);
+  background: var(--surface-raised);
   border: 1px solid var(--border);
   border-radius: 0.6rem;
   font: 0.8rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
